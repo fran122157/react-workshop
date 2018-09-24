@@ -6,10 +6,13 @@ const App = () => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React</h1>
+      <h1 className="App-title">React 16.2 para Mercado Libre</h1>
     </header>
     <p className="App-intro">
-      To get started, edit src/App.jsx and save to reload.
+      Para comenzar con el curso, podes ir a la documentación oficial del mismo
+    </p>
+    <p className="App-intro">
+      <a href="/api">Documentación del curso</a>
     </p>
   </div>
 );
