@@ -1,4 +1,5 @@
 import React from 'react';
+import { Alert } from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,7 +10,9 @@ const App = () => (
       <h1 className="App-title">React 16.2 para Mercado Libre</h1>
     </header>
     <p className="App-intro">
-      Para comenzar con el curso, podes ir a la documentación oficial del mismo
+      <Alert bsStyle="warning">
+        Para comenzar con el curso, podes ir a la documentación oficial del mismo
+      </Alert>
     </p>
     <p className="App-intro">
       <a href="/api">Documentación del curso</a>
