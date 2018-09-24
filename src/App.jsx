@@ -15,7 +15,7 @@ const App = () => (
       </Alert>
     </p>
     <p className="App-intro">
-      <a href="/api">Documentación del curso</a>
+      <a href="https://fedeg.github.io/react-workshop/#/">Documentación del curso</a>
     </p>
   </div>
 );
