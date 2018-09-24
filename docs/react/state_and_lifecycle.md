@@ -57,10 +57,12 @@ this.setState(function(prevState, props) {
 El ciclo de vida de un componente consta de un conjunto de métodos que tiene un orden especifico y cambian el comportamiento del componente.
 
 Ciclo de vida de react 16.2:
-https://cdn-images-1.medium.com/max/1000/1*sn-ftowp0_VVRbeUAFECMA.png
+
+![ciclo 16.2](https://cdn-images-1.medium.com/max/1000/1*sn-ftowp0_VVRbeUAFECMA.png)
 
 Ciclo de vida de react 16.3:
-https://cdn-images-1.medium.com/max/2000/1*cEWErpe-oY-S1dOaT1NtA.jpeg
+
+![ciclo 16.3](https://cdn-images-1.medium.com/max/2000/1*cEWErpe-oY-_S1dOaT1NtA.jpeg)
 
 ### Funciones del ciclo de vida de react 16.2
 Link con documentación sobre cada método: [react indepth life cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
