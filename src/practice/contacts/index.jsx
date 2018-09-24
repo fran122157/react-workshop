@@ -1,32 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  Button, Grid,
-  Row, Col,
-} from 'react-bootstrap';
+import { Grid } from 'react-bootstrap';
 
-import Profile from './Profile';
-import logo from '../../logo.svg';
+import Profiles from './Profiles';
+import Header from './header';
+
 import './index.css';
 
-const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <Row>
-        <input className="search-input" type="text" />
-        <Button>Buscar</Button>
-      </Row>
-    </header>
-    <Grid className="App-intro">
-      <br />
-      <Row>
-        <Col xs={3}>
-          <Profile />
-        </Col>
-      </Row>
-    </Grid>
-  </div>
-);
+class App extends React.Component {
+  state = {
+    users: null,
+  }
+
+  componentDidMount() {
+    fetch('https://randomuser.me/api/?results=25')
+      .then(res => res.json())
+      .then(({ results }) => this.setState({ users: results }));
+  }
+
+  render() {
+    const { users } = this.state;
+    if (!users) return null;
+    return (
+      <div className="App">
+        <Header />
+        <Grid className="App-intro">
+          <br />
+          <Profiles users={users} />
+        </Grid>
+      </div>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,19 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Image, Panel, Well } from 'react-bootstrap';
 
-const Profile = () => (
+const Profile = ({
+  name, username, avatarUrl, date,
+}) => (
   <Well>
-    <Image src="https://imagekit.androidphoria.com/wp-content/uploads/clash-royale-pajaro-simpsons.jpg" responsive circle />
+    <div className="text-center">
+      <Image src={avatarUrl} responsive style={{ margin: 'auto' }} />
+    </div>
     <br />
     <Panel>
-      <Panel.Heading> Federico Gonzalez </Panel.Heading>
+      <Panel.Heading>{`Name: ${name}`}</Panel.Heading>
       <Panel.Body>
-        <p>Date: fruta</p>
-        <p>asdsad: asdas</p>
-        <p>asdasd: asdasd</p>
+        <p>{`Username: ${username}`}</p>
+        <p>{`Fecha de nacimiento: ${date}`}</p>
       </Panel.Body>
     </Panel>
   </Well>
 );
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
+  avatarUrl: PropTypes.string.isRequired,
+};
 
 export default Profile;
