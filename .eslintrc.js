@@ -3,13 +3,20 @@ module.exports = {
   globals: {
     document: true
   },
+  env: {
+    browser: true
+  },
   overrides: [{
     files: [
       "**/*.test.js",
       "**/*.test.jsx"
     ],
+    globals: {
+      document: true
+    },
     env: {
-      jest: true
+      jest: true,
+      browser: true
     },
     plugins: ["jest"],
     rules: {
