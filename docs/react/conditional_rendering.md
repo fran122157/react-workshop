@@ -1,7 +1,7 @@
 # Representación condicional
 
-En React, pudemos crear componentes distintos que encapsulan el comportamiento que se necesita.
-Luego, pudemos procesar solo algunos de ellos, dependiendo del estado de la aplicación.
+En React, podemos crear componentes distintos que encapsulan el comportamiento que se necesita.
+Luego, podemos procesar solo algunos de ellos, dependiendo del estado de la aplicación.
 
 La representación condicional en React funciona de la misma forma que las condiciones funcionan en JavaScript.
 Vamos a utilizar operadores JavaScript como `if` o el `if` ternario (`? :`) para crear elementos que representen el estado actual, y permitan que React actualice la interfaz de usuario para que coincida con ellos.
@@ -74,7 +74,7 @@ render() {
 
 ## Evitar que los componentes se rendericen
 En casos excepcionales, es posible que esperemos que un componente se oculte a pesar de que fue procesado por otro componente.
-Para hacer esto, un componente puede devuelver `null` en lugar de su salida de renderizado.
+Para hacer esto, un componente puede retornar `null` en lugar de su salida de renderizado.
 
 En el ejemplo a continuación, el `<WarningBanner/>` se representa según el valor de la `prop` llamada `warn`. Si el valor de la `prop` es `false`, entonces el componente no se muestra:
 
@@ -124,5 +124,5 @@ ReactDOM.render(
 
 Nota: El retorno de `null` en el `render` de un componente no afecta la activación de los métodos del ciclo de vida del componente. Por ejemplo, se seguirán llamando `componentWillUpdate` y `componentDidUpdate`.
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/conditional-rendering.html

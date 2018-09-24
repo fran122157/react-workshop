@@ -5,11 +5,11 @@
 > Mercado libre 2018
 
 - Crear proyecto de React
-- Entender las herramietnas requeridas para trabajar con React
-- Entender todos los conceptos requeridos para tranajar con React 16.2
+- Entender las herramientas requeridas para trabajar con React
+- Entender todos los conceptos requeridos para trabajar con React 16.2
 
 [GitHub](https://github.com/FedeG/react-workshop)
-[Comenzar](/react/)
+[Comenzar](react/README.md)
 
 <!-- background image -->
 ![](/assets/background.png)

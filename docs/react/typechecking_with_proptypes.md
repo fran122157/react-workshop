@@ -1,9 +1,9 @@
-# Verificacion de tipos con React
+# Verificación de tipos con React
 
-A medida que una aplicación crece, puede tener muchos errores con la verificación de tipos o incluso no tener documentacion sobre el tipo los tipos de datos.
+A medida que una aplicación crece, puede tener muchos errores con la verificación de tipos o incluso no tener documentación sobre el tipo los tipos de datos.
 Para algunas aplicaciones, podemos usar extensiones de JavaScript como Flow o TypeScript para tipar toda la aplicación.
 Pero incluso si no los usamos, React tiene algunas capacidades incorporadas de verificación de tipo.
-Para ejecutar la verificación de tipo en las `props` de un componente, pudemos establear distintos tipos de datos para cada `prop` mediante el uso de `propTypes`:
+Para ejecutar la verificación de tipo en las `props` de un componente, podemos establear distintos tipos de datos para cada `prop` mediante el uso de `propTypes`:
 
 ```javascript
 import PropTypes from 'prop-types';
@@ -49,7 +49,7 @@ MyComponent.propTypes = {
   // Un elemento de un conjunto de opciones
   optionalEnum: PropTypes.oneOf(['News', 'Photos']),
 
-  // Se pueda tambien decir que el dato puede tener distintos tipos
+  // Se pueda también decir que el dato puede tener distintos tipos
   optionalUnion: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
@@ -74,7 +74,7 @@ MyComponent.propTypes = {
   // Cualquier valor pero que este definida
   requiredAny: PropTypes.any.isRequired,
 
-  // Podemos incluso crear una funcion de validacion.
+  // Podemos incluso crear una función de validacion.
   customProp: function(props, propName, componentName) {
     if (!/matchme/.test(props[propName])) {
       return new Error(
@@ -112,5 +112,5 @@ ReactDOM.render(
 );
 ```
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://reactjs.org/docs/typechecking-with-proptypes.html

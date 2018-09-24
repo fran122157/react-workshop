@@ -1,48 +1,48 @@
-## ¿Qué es ReactJS?
+# ¿Qué es ReactJS?
 Es una tecnología front-end, la cual es una librería de JavaScript open-source creada por Facebook para construir interfaces de usuario.
 Surgio para desarrollar aplicaciones SPA (Single Page Applications) de manera más eficiente.
 Normalmente se utiliza en el lado cliente, pero también se puede utilizar en el lado servidor, haciendo posible la creación de aplicaciones isomórficas.
 
-#### Que son aplicaciones isomórficas?
+### Que son aplicaciones isomórficas?
 Una aplicación Javascript isomórfica es aquella aplicación cuyo Javascript se puede ejecutar tanto el parte cliente como en la parte servidor. En la parte cliente mediante browser y en la parte servidor mediante node.js o io.js entre otros.
 
-### Caracteristicas principales
-- Basado en componentes, composición y reutilizacion de los mismos
+## Caracteristicas principales
+- Basado en componentes, composición y reutilización de los mismos
 - Componentes con estado interno
-- Renderizacion eficiente
+- Renderización eficiente
 - Flujo de datos unidireccional
 - Capacidad para aplicaciones isomórficas
 
-#### Basado en componentes, composición y reutilizacion de los mismos
+### Basado en componentes, composición y reutilización de los mismos
 Las componentes son elementos independientes y pueden ser reutilizados, además, describen cómo tienen que visualizarse y cómo tienen que comportarse.
 Cada uno de estos puede utilizar otro componentes y ser usado por otra componente, esto permite crear aplicaciones grandes pero que cada elemento de la interfaz de usuario sea independiente en cuanto a su funcionalidad.
-Crear componentes nos permite aislar el comportamiento en pequenas partes las cuales facilitan el trabajo a la hora de debugear, mejorar y reutilizar codigo.
+Crear componentes nos permite aislar el comportamiento en pequenas partes las cuales facilitan el trabajo a la hora de debugear, mejorar y reutilizar código.
 
-https://cdn-images-1.medium.com/max/600/1*m2k00x1C__Nbkd2tyemyqw.png
+![components](https://cdn-images-1.medium.com/max/600/1*m2k00x1C__Nbkd2tyemyqw.png)
 
-#### Componentes con estado interno
-Las componentes pueden tener (o no) un estado interno en el cual guardar informacion util para su comportamiento.
+### Componentes con estado interno
+Las componentes pueden tener (o no) un estado interno en el cual guardar información util para su comportamiento.
 
-#### Renderizacion eficiente
+### Renderización eficiente
 Para renderizar mas eficientemente React implementa Virtual DOM.
 Virtual DOM es una copia del DOM en memoria que se utiliza para optimizar los cambios en el DOM real.
 El mecanismo utilizado consta en crear una copia del DOM en memoria (virtual DOM), luego utiliza un algoritmo para comparar (diff) las propiedades y actualizar solamente las partes que cambiaron.
 Esto permite actualizar solo los elementos que tienen un cambio en la interfaz de usuario.
 
-https://cdn-images-1.medium.com/max/800/1*jb7rWNWkjLcGri_GZhxBGA.png
+![render](https://cdn-images-1.medium.com/max/800/1*jb7rWNWkjLcGri_GZhxBGA.png)
 
-#### Flujo de datos unidireccional
+### Flujo de datos unidireccional
 La mayoría de frameworks para resolver el patrón MVVM (Model-View-ViewModel) utilizan un sistema de data-binding bidireccional, que se encarga de sincronizar automáticamente la vista y el viewmodel.
 Sin embargo, React utiliza un sistema de databinding unidireccional, es decir, los datos de la aplicación fluyen en una sola dirección.
 
-https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png
+![data flow](https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png)
 
-#### Capacidad para aplicaciones isomórficas
+### Capacidad para aplicaciones isomórficas
 Esto significa que se puede interpretar los componentes de React y renderizarlos como HTML estático en el servidor.
 Esto mejora el rendimiento de la carga inicial ya que el usuario no necesita esperar a que el JS sea descargado para ver la interfaz inicial, y React puede reutilizar el HTML renderizado en el servidor así que no necesita generarlo en el lado del cliente.
 
-### Links relacionados
-- Documentacion oficial de react: [version 16.2](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/)
+## Links relacionados
+- Documentación oficial de react: [versión 16.2](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/)
 - Documentos, videos, talleres y mas cosas relacionadas con react: [awesome-react](https://github.com/enaqx/awesome-react)
 - Documentos, videos, talleres y mas cosas relacionadas con react en espanol: [react espanol](https://github.com/jlobos/react-espanol)
 - Componentes para reutilizar: [awesome-react-components](https://github.com/brillout/awesome-react-components)

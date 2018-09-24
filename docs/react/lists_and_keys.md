@@ -48,8 +48,8 @@ ReactDOM.render(
 
 ## Claves
 En el caso de ejecutar la componente de lista anterior en React vamos a ver una advertencia de que requerimos una `key` en los elementos de la lista que estamos armando.
-La `key` es un *string* que es importante en las lista de React, ya que permite que React calcule mas rapido la diferencia para renderizar.
-Esta clave tiene que ser unica para cada elemento, por lo general de usa un `id` de los elementos a mostrar.
+La `key` es un *string* que es importante en las lista de React, ya que permite que React calcule mas rápido la diferencia para renderizar.
+Esta clave tiene que ser única para cada elemento, por lo general de usa un `id` de los elementos a mostrar.
 
 Nota: cuando no especificamos una `key` React usa el index del elemento en la lista, usualmente se utiliza en index incluso como `key` definida pero este puede traer problemas.
 
@@ -78,5 +78,5 @@ ReactDOM.render(
 );
 ```
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/lists-and-keys.html

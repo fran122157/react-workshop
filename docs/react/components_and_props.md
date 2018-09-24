@@ -2,7 +2,7 @@
 
 Los componentes le permiten dividir la IU en piezas independientes y reutilizables, y pensar en cada pieza aisladamente.
 
-Conceptualmente, los componentes son las funciones de JavaScript.
+Conceptualmente, los componentes son las funciónes de JavaScript.
 Aceptan entradas arbitrarias (llamadas "props") y devuelven elementos React que describen lo que debería aparecer en la pantalla.
 
 ### Tipos de componentes
@@ -18,7 +18,7 @@ const Welcome = props => <h1>Hello, {props.name}</h1>;
 ```
 
 Esta función es un componente React válido porque acepta un único argumento `props` (que significa propiedades y es un objeto) con datos y devuelve un elemento React.
-Llamamos a dichos componentes `functional` porque son, literalmente, funciones de JavaScript.
+Llamamos a dichos componentes `functional` porque son, literalmente, funciónes de JavaScript.
 
 
 También podes usar una clase ES6 para definir un componente:
@@ -51,9 +51,9 @@ ReactDOM.render(
 );
 ```
 
-En el ejemplo anterior podemos ver como los atributos JSX que pasamos a la componente *Welcome* (`name='Sara'`) llegan como un objeto (`props`) con esa informacion (en este caso: `{name: 'Sara'}`)
+En el ejemplo anterior podemos ver como los atributos JSX que pasamos a la componente *Welcome* (`name='Sara'`) llegan como un objeto (`props`) con esa información (en este caso: `{name: 'Sara'}`)
 
-*Nota*: Todas las componentes de React creadas por el usuario tienen que empezar con letra mayuscula ya que React/JSX interpreta que si empieza con mayuscula es una componente propio y que si empieza con minuscula es un tag HTML. [Mas informacion sobre esta nota](https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized)
+*Nota*: Todas las componentes de React creadas por el usuario tienen que empezar con letra mayúscula ya que React/JSX interpreta que si empieza con mayúscula es una componente propio y que si empieza con minúscula es un tag HTML. [Mas información sobre esta nota](https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized)
 
 ### Componiendo componentes
 Los componentes pueden referirse a otros componentes en su salida.
@@ -126,7 +126,7 @@ function sum(a, b) {
   return a + b;
 }
 ```
-Tales funciones se llaman *puras* porque no intentan cambiar sus entradas, y siempre devuelven el mismo resultado para las mismas entradas.
+Tales funciónes se llaman *puras* porque no intentan cambiar sus entradas, y siempre devuelven el mismo resultado para las mismas entradas.
 Por el contrario, esta función es *impura* porque cambia su propia entrada:
 
 ```javascript
@@ -136,4 +136,4 @@ function withdraw(account, amount) {
 ```
 
 React es bastante flexible pero tiene una sola regla estricta:
-*Todos los componentes de React deben actuar como funciones puras con respecto a las props.*
+*Todos los componentes de React deben actuar como funciónes puras con respecto a las props.*

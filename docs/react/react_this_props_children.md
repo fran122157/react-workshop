@@ -29,5 +29,5 @@ ReactDOM.render(
 En este ejemplo, los `div` que estan dentro del componente `<Panel>` va a llegar a dicho componente como `children`
 
 
-## Documentacion relacionada:
+## Documentación relacionada:
 - https://learn.co/lessons/react-this-props-children

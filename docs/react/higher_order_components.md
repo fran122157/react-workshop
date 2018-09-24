@@ -10,11 +10,11 @@ Mientras que un componente transforma `props` en UI, un componente de orden supe
 Los HOC son comunes en las bibliotecas de React de terceros, como Redux's `connect` y Relay's `createFragmentContainer`.
 
 ## Usar HOC para Cross-Cutting Concerns
-Nota: anteriormente React recomendaba usar mixins para estos casos pero con el tiempo quedo verificado que usar mixins generaba mas problemas que soluciones. Si queres las notas oficiales del react sobre el tema: [Mas informacion](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/blog/2016/07/13/mixins-considered-harmful.html)
+Nota: anteriormente React recomendaba usar mixins para estos casos pero con el tiempo quedo verificado que usar mixins generaba mas problemas que soluciones. Si queres las notas oficiales del react sobre el tema: [Mas información](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/blog/2016/07/13/mixins-considered-harmful.html)
 
-Los componentes de React buscan ser reutilizables y hacer que la logica sea independiente en cada componente, pero hay casos donde esa estructura genera repeticiones de codigo entre componentes.
+Los componentes de React buscan ser reutilizables y hacer que la logica sea independiente en cada componente, pero hay casos donde esa estructura genera repeticiones de código entre componentes.
 
-Por ejemplo podemos tener dos comonentes que lean informacion desde la misma fuente de datos:
+Por ejemplo podemos tener dos componentes que lean información desde la misma fuente de datos:
 ```javascript
 class CommentList extends React.Component {
   constructor(props) {
@@ -83,7 +83,7 @@ class BlogPost extends React.Component {
 }
 ```
 A simple vista vemos como estas dos componentes tiene una logica muy similar.
-En estos casos, usualmente usariamos herencia pero en este modelo vamos a usar composicion para que el codigo sea mas ordenado y podamos trabajar evitando futuros problemas. Si queres detalles de porque se usa conposision en lugar de herencia, en la documentacion oficial tenes un apartado sobre el tema: [composition vs inheritance](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/composition-vs-inheritance.html)
+En estos casos, usualmente usariamos herencia pero en este modelo vamos a usar composición para que el código sea mas ordenado y podamos trabajar evitando futuros problemas. Si queres detalles de porque se usa composición en lugar de herencia, en la documentación oficial tenes un apartado sobre el tema: [composition vs inheritance](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/composition-vs-inheritance.html)
 
 Para aislar esa logica vamos a usar una HOC:
 ```javascript
@@ -135,10 +135,10 @@ const BlogPostWithSubscription = withSubscription(
 Un HOC no modifica el componente de entrada, ni utiliza la herencia para copiar su comportamiento.
 Un HOC compone el componente original envolviéndolo en un componente contenedor y siempre un HOC es una función pura con cero efectos secundarios.
 
-## No lo uses para moduficar el componente original. Usa la composición
-Si bien hablamos que los HOC son composicion y no tiene efecto de lado, esto depende de como lo implementemos.
+## No lo uses para modificar el componente original. Usa la composición
+Si bien hablamos que los HOC son composición y no tiene efecto de lado, esto depende de como lo implementemos.
 Es importante respetar la premisa de la compocion.
-Por ejemplo, si no respetamos eso podemos llegar a modificar el compotamiento del componente:
+Por ejemplo, si no respetamos eso podemos llegar a modificar el comportamiento del componente:
 
 ```javascript
 function logProps(InputComponent) {
@@ -157,11 +157,11 @@ const EnhancedComponent = logProps(InputComponent);
 
 En este caso modificamos el componente, esto trae muchos problemas:
 - El HOC elimina el `componentWillReceiveProps` original
-- Si ese HOC se usa junto con otro igual, uno va a cancelar el metodo del otro
+- Si ese HOC se usa junto con otro igual, uno va a cancelar el método del otro
 - La componente no se va a poder reutilizar sin este HOC
-- Para usar este HOC si o si tendriamos que ver su codigo y tenerlo en cuenta con sumo detalle
+- Para usar este HOC si o si tendriamos que ver su código y tenerlo en cuenta con sumo detalle
 
-Si se quiere hacer eso pero de forma correcta se puede hacer con composision:
+Si se quiere hacer eso pero de forma correcta se puede hacer con composición:
 ```javascript
 function logProps(WrappedComponent) {
   return class extends React.Component {
@@ -177,7 +177,7 @@ function logProps(WrappedComponent) {
 }
 ```
 
-## Convensiones
+## Convenciones
 
 ### Evitar cambiar la firma de un componente
 Con convension un HOC no tiene que alterar mucho los `props` que requiere un componente.
@@ -197,10 +197,10 @@ const ConnectedComment = enhance (CommentList);
 En otras palabras, connect es una función de orden superior que devuelve un componente de orden superior.
 
 Esta forma puede parecer confusa o innecesaria, pero tiene una propiedad útil.
-Los HOC de argumento único como el que devuelve la función de conexión tienen la firma `Componente => Componente`. Las funciones cuyo tipo de salida es el mismo que su tipo de entrada son mas fáciles de componer juntas.
+Los HOC de argumento único como el que devuelve la función de conexión tienen la firma `Componente => Componente`. Las funciónes cuyo tipo de salida es el mismo que su tipo de entrada son mas fáciles de componer juntas.
 
 ### Usar un displayName para facilitar el debugging
-El `displayName` es utilizado por los plugins de debug para mostrar los componentes, en el caso de los HOC es recomendable mostrar un nombre que refleje la composision realizada.
+El `displayName` es utilizado por los plugins de debug para mostrar los componentes, en el caso de los HOC es recomendable mostrar un nombre que refleje la composición realizada.
 
 ```javascript
 function withSubscription(WrappedComponent) {
@@ -217,11 +217,11 @@ function getDisplayName(WrappedComponent) {
 ## Advertencias
 Los componentes de orden superior vienen con algunas advertencias que no son inmediatamente obvias si eres nuevo en React.
 
-### No uses el HOC dentro del metodo render
+### No uses el HOC dentro del método render
 Nunca hagas esto:
 ```javascript
 render() {
-  // A new version of EnhancedComponent is created on every render
+  // A new versión of EnhancedComponent is created on every render
   // EnhancedComponent1 !== EnhancedComponent2
   const EnhancedComponent = enhance(MyComponent);
   // That causes the entire subtree to unmount/remount each time!
@@ -229,19 +229,19 @@ render() {
 }
 ```
 
-### Los metodos staticos hay que copiarlos
-Cuando usamos HOC los metodos static que esten en el componente original no van a estar en el componente final, por ende, tenemos que copiarlos.
+### Los métodos estáticos hay que copiarlos
+Cuando usamos HOC los métodos static que esten en el componente original no van a estar en el componente final, por ende, tenemos que copiarlos.
 
 ```javascript
-// Creamos un metodo static
+// Creamos un método static
 WrappedComponent.staticMethod = function() {/*...*/}
 // Usamos un HOC
 const EnhancedComponent = enhance(WrappedComponent);
 
-// El metodo no va a existir en la componente final
+// El método no va a existir en la componente final
 typeof EnhancedComponent.staticMethod === 'undefined' // true
 
-// Una solucion a esto es copiar el metodo manualmente
+// Una solución a esto es copiar el método manualmente
 
 function enhance(WrappedComponent) {
   class Enhance extends React.Component {/*...*/}
@@ -250,8 +250,8 @@ function enhance(WrappedComponent) {
   return Enhance;
 }
 
-// Pero para copiar manualmente tenemos que conocer todos los metodos static que tiene la componente original
-// Para evitar tener que conocerlos, podemos usar un modulo que copia todos los metodos static automaticamente: hoist-non-react-statics
+// Pero para copiar manualmente tenemos que conocer todos los métodos static que tiene la componente original
+// Para evitar tener que conocerlos, podemos usar un modulo que copia todos los métodos static automáticamente: hoist-non-react-statics
 
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
@@ -264,7 +264,7 @@ function enhance(WrappedComponent) {
 
 ### Los refs no funcionan igual
 El uso de `refs` en este caso hace que la referencia siempre quede en el componente de mas afuera es decir en el HOC mas exterior.
-La solucion a esto es evitar el uso de `ref`, solo en casos muy especificos se puede modificar el ref pero para esto hay que desde el HOC conocer que se itiliza un `ref` hacia el.
+La solución a esto es evitar el uso de `ref`, solo en casos muy específicos se puede modificar el ref pero para esto hay que desde el HOC conocer que se utiliza un `ref` hacia el.
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/higher-order-components.html

@@ -1,6 +1,6 @@
 # Contexto
 Con React, es fácil rastrear el flujo de datos a través de sus componentes.
-Al ver un componente, puedemos ver que `props` se están pasando, lo que hace que las aplicaciones sean fáciles de entender.
+Al ver un componente, podemos ver que `props` se están pasando, lo que hace que las aplicaciones sean fáciles de entender.
 
 En algunos casos, deseamos pasar datos a través del árbol de componentes sin tener que pasar la `prop` de forma manual por todos los niveles. Podemos hacerlo directamente en React con la poderosa *API de contexto*.
 Si bien tiene una funcionalidad interesante, no es recomendado utilizarla, a continuaciones veremos en que casos si y en que casos no hay que usarla.
@@ -47,7 +47,7 @@ class MessageList extends React.Component {
   }
 }
 ```
-En este ejeplo pasamos la `prop` color entre las tres componentes.
+En este ejemplo pasamos la `prop` color entre las tres componentes.
 Con contexto podemos pasarlo directamente.
 
 ```javascript
@@ -103,7 +103,7 @@ El contexto también nos permite crear una API donde los padres y los hijos se c
 Por ejemplo, una biblioteca que funciona de esta manera es React Router V4.
 
 ## Uso de contexto en el ciclo de vida
-Si el componente tiene `contextTypes` definido a varios metodos del ciclo de vida les llega un parametro adicional:
+Si el componente tiene `contextTypes` definido a varios métodos del ciclo de vida les llega un parametro adicional:
 - `constructor(props, context)`
 - `componentWillReceiveProps(nextProps, nextContext)`
 - `shouldComponentUpdate(nextProps, nextState, nextContext)`
@@ -112,7 +112,7 @@ Si el componente tiene `contextTypes` definido a varios metodos del ciclo de vid
 ## Actualizando el contexto
 No lo hagas
 React tiene una API para actualizar el contexto, pero está fundamentalmente rota y no deberías usarla.
-Mas informacion sobre esto: [updating context](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/context.html#updating-context)
+Mas información sobre esto: [updating context](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/context.html#updating-context)
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/context.html

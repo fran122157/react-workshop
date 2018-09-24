@@ -1,12 +1,12 @@
-# ES6, reglas del linter y mejoras de codigo
+# ES6, reglas del linter y mejoras de código
 
 ## ES6
 ECMAScript v6 (abreviado como ES6 o ES2015) es el estándar que seguirá JavaScript a partir de Junio de este año (2015).
 Hasta el momento la versión de JS que estamos usando en nuestros navegadores y Node.js, es la v5.
-En nuestro caso para poder usar funcionalidades de ES6 (e incluso superiores si lo configuramos) vamos a traspilar el codigo medieante *Babel*
+En nuestro caso para poder usar funcionalidades de ES6 (e incluso superiores si lo configuramos) vamos a traspilar el código mediante *Babel*
 
 ### Nuevas mejoras en ES6
-Vamos a ver algunas mejoras utiles, si queres ver todas las novedades de ES6: [es6 features](http://es6-features.org)
+Vamos a ver algunas mejoras útiles, si queres ver todas las novedades de ES6: [es6 features](http://es6-features.org)
 
 #### let
 Ahora podes declarar las variables con `let` en lugar de `var` para que las variables solo sean accesibles dentro de un entorno determinado.
@@ -62,7 +62,7 @@ const miFuncion = (num) => num + num;
 ```
 
 #### Clases
-Ya vimos ejemplo de esta mejora pero es interesante saber que en la mayoria de las implementaciones actuales de JavaScript no lo sopotan.
+Ya vimos ejemplo de esta mejora pero es interesante saber que en la mayoría de las implementaciones actuales de JavaScript no lo soportan.
 
 ```javascript
 class Ejemplo extends ClaseBase {
@@ -73,7 +73,7 @@ class Ejemplo extends ClaseBase {
     // ...
   }
 
-  metodo() {
+  método() {
   	// ...
   }
 }
@@ -100,7 +100,7 @@ console.log(peso); //75
 ```
 
 #### Valores por defecto
-Esto nos permite en las funciones agregar un valor por defecto a los parametros
+Esto nos permite en las funciónes agregar un valor por defecto a los parámetros
 
 ```javascript
 //ES5
@@ -113,14 +113,14 @@ function(valor="foo") {...};
 ```
 
 #### Spread Operator
-Esto nos permite copiar un conjunto de elemento y sumarlos a un array (tambien existe para objetos pero en versiones mas nuevas de ES)
+Esto nos permite copiar un conjunto de elemento y sumarlos a un array (también existe para objetos pero en versiones mas nuevas de ES)
 ```javascript
 const params = [ "hello", true, 7 ]
 const other = [ 1, 2, ...params ] // [ 1, 2, "hello", true, 7 ]
 ```
 
 #### Rest Parameter
-Esto permite guardar el *resto de parametros* en una variable
+Esto permite guardar el *resto de parámetros* en una variable
 
 ```javascript
 function f(x, y, ...a) {
@@ -209,8 +209,8 @@ msgAfterTimeout("", "Foo", 100).then((msg) =>
 ```
 
 ## Linter
-ESlint actualmente no solo puede marcar a problemas de sintaxis o de estilo sino que tambien puede marcar mas cosas como por ejemplo: problemas de performance
-Cualquier regla de ESlint se puede buscar en la [documentacion oficial](https://eslint.org/)
+ESlint actualmente no solo puede marcar a problemas de sintaxis o de estilo sino que también puede marcar mas cosas como por ejemplo: problemas de performance
+Cualquier regla de ESlint se puede buscar en la [documentación oficial](https://eslint.org/)
 
 
 ## Aclaraciones y mejoras
@@ -264,5 +264,5 @@ ReactDOM.render(
 
 ### PureComponents
 `React.PureComponent` es similar a `React.Component`.
-La diferencia entre ellos es que `React.Component` no implementa `shouldComponentUpdate()`, pero `React.PureComponent` lo implementa con una comparacion superficial.
+La diferencia entre ellos es que `React.Component` no implementa `shouldComponentUpdate()`, pero `React.PureComponent` lo implementa con una comparación superficial.
 Si la función `render()` de su componente React genera el mismo resultado con las mismas `props` y el mismo `state`, puede usar `React.PureComponent` para aumentar el rendimiento en algunos casos.

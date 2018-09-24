@@ -9,7 +9,7 @@ React DOM se encarga de actualizar el DOM para que coincida con los elementos de
 Digamos que hay un `<div>` en algún lugar de su archivo HTML: `<div id ="root"></div>`
 Llamamos a esto un nodo del DOM base (nodo `root` de ahora en mas) porque todo dentro de el será administrado por React DOM.
 
-Las aplicaciones creadas solo con React generalmente tienen un solo nodo `root` pero en aplicaciones isomórficas o aplicaciones que utilizan otras tecnologias puede existir sin ninguna complicacion varios nodos `root` (una por pagina) o nodos aparte (secciones del HTML).
+Las aplicaciones creadas solo con React generalmente tienen un solo nodo `root` pero en aplicaciones isomórficas o aplicaciones que utilizan otras tecnologías puede existir sin ninguna complicación varios nodos `root` (una por pagina) o nodos aparte (secciones del HTML).
 
 Para mostrar un elemento React en un elemento del DOM, se utiliza `ReactDOM.render()`
 Un ejemplo:
@@ -43,14 +43,15 @@ setInterval(tick, 1000);
 ```
 
 En la práctica, la mayoría de las aplicaciones de React solo llaman a `ReactDOM.render()` una vez.
-Luego, aprenderemos cómo dicho código se encapsula en componentes con estado o parametros.
+Luego, aprenderemos cómo dicho código se encapsula en componentes con estado o parámetros.
 
 ### Una prueba de como React solo actualiza lo que es necesario
 React DOM compara el elemento y sus subelementos con el anterior, y solo aplica las actualizaciones necesarias para llevar el DOM al estado deseado.
-Esto se puede ver con una extension en el navegador: [react devtools](https://github.com/facebook/react-devtools)
+Esto se puede ver con una extensión en el navegador: [react devtools](https://github.com/facebook/react-devtools)
 
 En nuestro ejemplo anterior:
-https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/granular-dom-updates-c158617ed7cc0eac8f58330e49e48224.gif
 
-### Documentacion oficial:
+![clock](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/granular-dom-updates-c158617ed7cc0eac8f58330e49e48224.gif)
+
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/rendering-elements.html

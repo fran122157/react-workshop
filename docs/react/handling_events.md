@@ -1,6 +1,6 @@
 # Manejo de eventos
 
-El manejo de eventos en React es muy similar al manejo de eventos del DOM, solo hay algunas diferencias sintacticas.
+El manejo de eventos en React es muy similar al manejo de eventos del DOM, solo hay algunas diferencias sintácticas.
 
 ## Diferencias
 
@@ -49,7 +49,7 @@ function ActionLink() {
 ```
 
 En el ejemplo, `e` es un *SyntheticEvent*.
-React define estos *SyntheticEvents* de acuerdo con la especificación W3C, por lo que no tenemos que preocuparnos por la compatibilidad entre navegadores. Mas informacion sobre [SyntheticEvent](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/events.html)
+React define estos *SyntheticEvents* de acuerdo con la especificación W3C, por lo que no tenemos que preocuparnos por la compatibilidad entre navegadores. Mas información sobre [SyntheticEvent](https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/events.html)
 
 ### Detalles de manejo de eventos
 Cuando utilizamos componentes definidos con clases ES6, un patrón común es que un controlador de eventos sea un método en la clase.
@@ -86,20 +86,20 @@ ReactDOM.render(
 );
 ```
 
-Hay que tener cuidado con el significado de `this` en las funciones.
+Hay que tener cuidado con el significado de `this` en las funciónes.
 En JavaScript, los métodos de clase no están vinculados por defecto.
 Si se olvida vincular `this.handleClick` y pasarlo a `onClick`, `this` no estará definido cuando realmente se llame a la función.
-Esto no es un comportamiento específico de React, es una parte de cómo funcionan las funciones en JavaScript.
+Esto no es un comportamiento específico de React, es una parte de cómo funcionan las funciónes en JavaScript.
 En general, si se refiere a un método sin `()` después de él, como por ejemplo `onClick={this.handleClick}` se debe vincular ese método.
 
-### Formas de vincular una funcion con this en React
-1- Creando una nueva funcion que llame a la funcion original: `function(e){this.handleClick(e)}`
+### Formas de vincular una función con this en React
+1- Creando una nueva función que llame a la función original: `function(e){this.handleClick(e)}`
 2- Usar `bind`: `this.hangleClick.bind(this)`
 3- Usar *arrow functions* (esto se implementa a partir de ES6 pero ES6 por lo general se utiliza en proyectos de React).
 
 Para el caso 3 hay dos maneras.
 1- Direactemente crearla usuarla como una *arrow function*: `const handleClick = () => this.setState(prevState => ({isToggleOn: !prevState.isToggleOn}))`
-2- Crearla como un metodo de clase directamente como *arrow function*:
+2- Crearla como un método de clase directamente como *arrow function*:
 
 ```javascript
 class Toggle extends React.Component {
@@ -134,5 +134,5 @@ Las dos líneas anteriores son equivalentes.
 
 En ambos casos, el argumento `e` representa el evento React y se pasará como un segundo argumento después del `id`.
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/handling-events.html

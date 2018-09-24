@@ -1,6 +1,6 @@
-## JSX
+# JSX
 
-JSX es una extension de la sintaxis de javascript, recomendada para utilizar en react para describir como deberia ser la interfaz de usuario.
+JSX es una extensión de la sintaxis de javascript, recomendada para utilizar en react para describir como debería ser la interfaz de usuario.
 JSX produce react elements.
 
 Un ejemplo de JSX: `const element = <h1>Hello, world!</h1>;`
@@ -12,8 +12,8 @@ React no requiere el uso de JSX, pero la mayoría de las personas lo encuentran 
 
 ## Uso de JSX
 
-#### Codigo javascript dentro de JSX
-Dentro de JSX se puede utilizar codigo javascript medienta `{}`
+#### Código javascript dentro de JSX
+Dentro de JSX se puede utilizar código javascript mediante `{}`
 
 Ejemplo:
 ```javascript
@@ -28,8 +28,8 @@ const element = (
 );
 ```
 
-#### Codigo JSX dentro de codigo JavaScript
-JSX genere elementos que podemos utitlizar direactamente en jacascript
+#### código JSX dentro de código JavaScript
+JSX genere elementos que podemos utilizar directamente en javascript
 Ejemplo:
 ```javascript
 function getGreeting(user) {
@@ -48,7 +48,7 @@ Dado que JSX está más cerca de JavaScript que de HTML, React DOM utiliza la co
 Por ejemplo, `class` se convierte en `className` en JSX y `tabindex` se convierte en `tabIndex`.
 
 #### Utilizar elementos dentro de JSX
-Si el elemento tiene un solo tag, podes cerrarlo directament con `/>`.
+Si el elemento tiene un solo tag, podes cerrarlo directamente con `/>`.
 Ejemplo: `const element = <img src={user.avatarUrl} />;`
 
 Si tenes mas de un elemento en JSX:
@@ -74,6 +74,6 @@ Por lo tanto, garantiza que nunca podrá inyectar nada que no esté escrito expl
 Todo se convierte en una cadena antes de ser renderizado.
 Esto ayuda a prevenir ataques XSS (cross-site-scripting).
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/introducing-jsx.html
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/jsx-in-depth.html

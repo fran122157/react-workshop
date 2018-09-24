@@ -54,12 +54,12 @@ class NameForm extends React.Component {
   }
 }
 ```
-En el ejemplo de puede ver el uso de una funcion para controlar el `onChange`, esta funcion se va a ejecutar por cada tecla que presione el usuario.
-Esto nos permite tener el control del formulario completamente desde React, ademas nos permite hacer validaciones e incluso alteraciones en los valores (por ejemplo se podria poner en mayuscula las letras)
+En el ejemplo de puede ver el uso de una función para controlar el `onChange`, esta función se va a ejecutar por cada tecla que presione el usuario.
+Esto nos permite tener el control del formulario completamente desde React, ademas nos permite hacer validaciones e incluso alteraciones en los valores (por ejemplo se podria poner en mayúscula las letras)
 
-### Distintos inputs similares a <input> de tipo texto
+### Distintos inputs similares a `<input>` de tipo texto
 
-#### <textarea>
+#### `<textarea>`
 ```javascript
 class EssayForm extends React.Component {
   constructor(props) {
@@ -95,7 +95,7 @@ class EssayForm extends React.Component {
 }
 ```
 
-#### <select>
+#### `<select>`
 ```javascript
 class FlavorForm extends React.Component {
   constructor(props) {
@@ -134,13 +134,13 @@ class FlavorForm extends React.Component {
 }
 ```
 
-Nota: tambien se puede usar un select multiple: `<select multiple={true} value={['B', 'C']}>`
+Nota: también se puede usar un select multiple: `<select multiple={true} value={['B', 'C']}>`
 
 ## Input de archivos
 El `<input type='file'/>` como su valor es de solo lectura, es un componente no controlado en React.
 
-## Utilizar un mismo metodo para los onChange
-Para lograr esto podemos agregar un campo `name` al input y en la funcion `onChange` que usemos actualizar el `state` con el valor de `name`.
+## Utilizar un mismo método para los onChange
+Para lograr esto podemos agregar un campo `name` al input y en la función `onChange` que usemos actualizar el `state` con el valor de `name`.
 Ejemplo (este es un ejemplo que ademas es valido para inputs de tipo checkbox):
 ```
 handleInputChange(event) {
@@ -153,5 +153,5 @@ handleInputChange(event) {
 }
 ```
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/forms.html

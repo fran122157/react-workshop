@@ -34,7 +34,7 @@ Si está utilizando la aplicación Create React, esto ya está configurado para 
 También se admite de forma predeterminada en Next.js.
 
 ## Ejemplo: React Loadable
-Esta libreria nos permite hacer ese tipo de import dinamico de una forma amigable:
+Esta librería nos permite hacer ese tipo de import dinámico de una forma amigable:
 
 Antes:
 ```javascript
@@ -60,5 +60,5 @@ const MyComponent = () => (
 ```
 React Loadable lo ayuda a crear estados de carga, estados de error, tiempos de espera, precarga y más. Incluso puede ayudarlo a renderizar una aplicación en el servidor con gran cantidad de código dividido.
 
-### Documentacion oficial:
+### Documentación oficial:
 - https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/docs/code-splitting.html
